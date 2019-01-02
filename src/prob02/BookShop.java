@@ -35,4 +35,15 @@ public class BookShop {
 		System.out.println("*****도서 정보 출력하기******");
 		displayBookInfo( books );
 	}
+
+	private static void displayBookInfo(Book[] books) {
+		for(Book book : books) {
+			System.out.print("책 제목 :"+book.title+", 작가:"+book.author+", 대여 유무:");
+			if(book.stateCode == 1) {
+				System.out.println("재고 있음");
+			}else {
+				System.out.println("대여중");
+			}
+		}
+	}
 }
